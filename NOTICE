@@ -1,0 +1,13 @@
+Cognis Harvest
+Copyright (c) 2026 Cognis Digital LLC (Wyoming, USA)
+
+Source-available under the Cognis Open Collaboration License (COCL) v1.0 — see
+LICENSE. NOT an OSI-approved "open source" license. Commercial use requires a
+separate license: licensing@cognis.digital
+
+Cognis Harvest is an early-prototype analytic tool for illicit-crop estimation.
+It operates on supplied or synthetic multispectral/SAR data; it is not a fielded
+satellite pipeline. Bundled data is SYNTHETIC. Yield/market coefficients in
+data/coefficients.json are ILLUSTRATIVE, not authoritative. Operational use
+requires calibrated, region-specific inputs and validation against ground truth.
+Use only within your lawful authority.

@@ -1,0 +1,10 @@
+{
+  "_note": "ILLUSTRATIVE coefficients only. Not authoritative agronomic or market figures. Replace with calibrated, region-specific inputs before operational use.",
+  "climate_factor": 1.0,
+  "soil_factor": 1.0,
+  "crops": {
+    "coca": {"yield_kg_per_ha": 1200, "price_per_kg": 1.5, "unit": "coca-leaf"},
+    "poppy": {"yield_kg_per_ha": 20, "price_per_kg": 200, "unit": "opium-gum"},
+    "cannabis": {"yield_kg_per_ha": 1000, "price_per_kg": 2.0, "unit": "dry-flower"}
+  }
+}

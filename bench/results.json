@@ -1,0 +1,77 @@
+{
+  "accuracy": {
+    "dataset": {
+      "scene_pixels": 1024,
+      "classes": 5
+    },
+    "classification_clean": {
+      "overall_accuracy": 0.998,
+      "per_class": {
+        "forest": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "soil": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "coca": {
+          "precision": 0.9722,
+          "recall": 0.9722,
+          "f1": 0.9722
+        },
+        "poppy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "cannabis": {
+          "precision": 0.9722,
+          "recall": 0.9722,
+          "f1": 0.9722
+        }
+      }
+    },
+    "area_mape_clean": 0.0,
+    "classification_cloudy_overall": 0.9932,
+    "accuracy_clear_pixels": 1.0,
+    "accuracy_cloud_pixels": 0.9707,
+    "change_detection": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 72,
+      "fp": 0,
+      "fn": 0
+    },
+    "determinism": true
+  },
+  "performance": [
+    {
+      "scene": "48x48",
+      "pixels": 2304,
+      "classify_s": 0.0268,
+      "pixels_per_s": 86120
+    },
+    {
+      "scene": "96x96",
+      "pixels": 9216,
+      "classify_s": 0.1053,
+      "pixels_per_s": 87510
+    },
+    {
+      "scene": "160x160",
+      "pixels": 25600,
+      "classify_s": 0.2992,
+      "pixels_per_s": 85569
+    }
+  ],
+  "environment": {
+    "python": "3.14.0",
+    "implementation": "CPython",
+    "system": "Windows",
+    "machine": "AMD64"
+  }
+}
