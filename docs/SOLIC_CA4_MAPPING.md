@@ -1,6 +1,6 @@
 # SOLIC Challenge Area 4 — Capability Mapping
 
-| Desired capability | Cognis Harvest | Module |
+| Desired capability | Terravue | Module |
 |---|---|---|
 | AI/ML detection of coca/poppy/cannabis from multispectral imagery | Nearest-centroid spectral classifier over multispectral signatures | `classify`, `detect` |
 | Automated area estimation with confidence intervals | Pixel-count × ground-area with accuracy-derived CIs | `area` |

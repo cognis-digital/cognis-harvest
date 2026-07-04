@@ -1,4 +1,4 @@
-from cognis_harvest import spectral
+from terravue import spectral
 
 
 def test_ndvi_vegetation_high():

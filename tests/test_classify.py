@@ -1,5 +1,5 @@
-from cognis_harvest import synth
-from cognis_harvest.classify import NearestCentroid
+from terravue import synth
+from terravue.classify import NearestCentroid
 
 
 def _clf():

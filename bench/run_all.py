@@ -34,7 +34,7 @@ def render_md(res) -> str:
     ch = a["change_detection"]
     env = res["environment"]
     L = []
-    L.append("# Cognis Harvest — Verification Results\n")
+    L.append("# Terravue — Verification Results\n")
     L.append("Reproduce with: `python bench/run_all.py` (regenerates this file).\n")
     L.append(f"Environment: {env['implementation']} {env['python']} on "
              f"{env['system']}/{env['machine']}. Deterministic synthetic data.\n")

@@ -1,10 +1,10 @@
 from collections import Counter
 
 from bench.metrics import confusion_matrix, macro_f1
-from cognis_harvest import synth
-from cognis_harvest.classify import NearestCentroid
-from cognis_harvest.detect import classify_scene
-from cognis_harvest.trends import area_series, expansion_alerts, growth
+from terravue import synth
+from terravue.classify import NearestCentroid
+from terravue.detect import classify_scene
+from terravue.trends import area_series, expansion_alerts, growth
 
 
 def _counts():

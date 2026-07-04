@@ -1,10 +1,10 @@
 from collections import Counter
 
-from cognis_harvest import synth
-from cognis_harvest.area import estimate_area
-from cognis_harvest.classify import NearestCentroid
-from cognis_harvest.detect import CROP_CLASSES, classify_scene
-from cognis_harvest.yield_model import estimate_yield
+from terravue import synth
+from terravue.area import estimate_area
+from terravue.classify import NearestCentroid
+from terravue.detect import CROP_CLASSES, classify_scene
+from terravue.yield_model import estimate_yield
 
 
 def _clf():

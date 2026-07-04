@@ -1,6 +1,6 @@
 # Limitations & Responsible Use
 
-**Cognis Harvest is an early prototype.** Read this before drawing conclusions.
+**Terravue is an early prototype.** Read this before drawing conclusions.
 
 ## Scope & honesty
 - **Synthetic separability ≠ real accuracy.** Bundled data and benchmarks use

@@ -5,12 +5,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from cognis_harvest import synth  # noqa: E402
-from cognis_harvest.area import estimate_area  # noqa: E402
-from cognis_harvest.classify import NearestCentroid  # noqa: E402
-from cognis_harvest.detect import classify_scene  # noqa: E402
-from cognis_harvest.report import render_text  # noqa: E402
-from cognis_harvest.yield_model import estimate_yield  # noqa: E402
+from terravue import synth  # noqa: E402
+from terravue.area import estimate_area  # noqa: E402
+from terravue.classify import NearestCentroid  # noqa: E402
+from terravue.detect import classify_scene  # noqa: E402
+from terravue.report import render_text  # noqa: E402
+from terravue.yield_model import estimate_yield  # noqa: E402
 
 clf = NearestCentroid(synth.BANDS).fit(synth.generate_training())
 scene, _ = synth.generate_scene(profile="clean")

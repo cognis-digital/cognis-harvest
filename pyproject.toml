@@ -3,9 +3,9 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cognis-harvest"
+name = "terravue"
 version = "0.2.0"
-description = "AI/ML multi-modal illicit-crop detection & yield estimation (Cognis Harvest)"
+description = "AI/ML multi-modal illicit-crop detection & yield estimation (Terravue)"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "Cognis Digital LLC" }]
@@ -18,10 +18,10 @@ dependencies = []
 Homepage = "https://cognis.digital"
 
 [project.scripts]
-cognis-harvest = "cognis_harvest.cli:main"
+terravue = "terravue.cli:main"
 
 [tool.setuptools]
-packages = ["cognis_harvest"]
+packages = ["terravue"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

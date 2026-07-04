@@ -1,4 +1,4 @@
-<h1 align="center">🟣 Cognis Harvest</h1>
+<h1 align="center">🟣 Terravue</h1>
 <p align="center"><b>AI/ML multi-modal illicit-crop detection &amp; yield estimation</b><br>
 <i>Multispectral + SAR → crop classification, cultivation area with confidence intervals, and yield/market estimates — self-hosted, offline.</i></p>
 
@@ -29,15 +29,15 @@
 ## Quick start
 
 ```bash
-git clone https://github.com/cognis-digital/cognis-harvest
-cd cognis-harvest
-python -m cognis_harvest demo --profile clean --geojson crops.geojson
-python -m cognis_harvest demo --profile cloudy      # SAR-fallback degradation
+git clone https://github.com/cognis-digital/terravue
+cd terravue
+python -m terravue demo --profile clean --geojson crops.geojson
+python -m terravue demo --profile cloudy      # SAR-fallback degradation
 ```
 
 ```bash
-cognis-harvest estimate --scene data/sample_scene.json --training data/training_samples.json
-cognis-harvest change --scene1 t1.json --scene2 t2.json --training data/training_samples.json
+terravue estimate --scene data/sample_scene.json --training data/training_samples.json
+terravue change --scene1 t1.json --scene2 t2.json --training data/training_samples.json
 ```
 
 ## Verification & proof

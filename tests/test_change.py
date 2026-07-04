@@ -1,6 +1,6 @@
-from cognis_harvest import synth
-from cognis_harvest.change import detect_change
-from cognis_harvest.classify import NearestCentroid
+from terravue import synth
+from terravue.change import detect_change
+from terravue.classify import NearestCentroid
 
 
 def test_detects_new_cultivation():

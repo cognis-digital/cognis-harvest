@@ -1,2 +1,2 @@
-"""Verification harness for Cognis Harvest: classification/area/change accuracy
+"""Verification harness for Terravue: classification/area/change accuracy
 against planted ground truth, plus performance benchmarks."""

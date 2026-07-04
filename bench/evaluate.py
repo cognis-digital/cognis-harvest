@@ -5,11 +5,11 @@ from __future__ import annotations
 import json
 from collections import Counter
 
-from cognis_harvest import synth
-from cognis_harvest.change import detect_change
-from cognis_harvest.classify import NearestCentroid
-from cognis_harvest.detect import CROP_CLASSES, classify_scene
-from cognis_harvest.geojson import to_geojson, to_json
+from terravue import synth
+from terravue.change import detect_change
+from terravue.classify import NearestCentroid
+from terravue.detect import CROP_CLASSES, classify_scene
+from terravue.geojson import to_geojson, to_json
 
 from .metrics import area_mape, classification_metrics, confusion_matrix, macro_f1, prf
 

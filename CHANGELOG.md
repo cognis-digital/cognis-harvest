@@ -23,7 +23,7 @@ Initial public release (early prototype).
 - Change detection between scenes — `change`.
 - GeoJSON export via scene geotransform — `geojson`.
 - Deterministic synthetic data generator with planted ground truth — `synth`.
-- CLI (`cognis-harvest`) with `demo`, `estimate`, `classify`, `change`, `geojson`.
+- CLI (`terravue`) with `demo`, `estimate`, `classify`, `change`, `geojson`.
 - Zero-dependency, offline.
 - Verification harness (`bench/`): classification/area/change accuracy vs ground
   truth + performance; results in `RESULTS.md`.

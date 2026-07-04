@@ -6,9 +6,9 @@ from __future__ import annotations
 import json
 import time
 
-from cognis_harvest import synth
-from cognis_harvest.classify import NearestCentroid
-from cognis_harvest.detect import classify_scene
+from terravue import synth
+from terravue.classify import NearestCentroid
+from terravue.detect import classify_scene
 
 
 def benchmark(sizes=(48, 96, 160)) -> list:
