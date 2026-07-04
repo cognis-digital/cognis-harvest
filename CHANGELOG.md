@@ -2,6 +2,14 @@
 
 Adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] — 2026-07-03
+
+### Added
+- **Cultivation-trend analysis** (`trends.py`): per-crop cultivation-area time
+  series, least-squares growth rate (ha/step), and expansion alerts over a
+  sequence of scenes; `synth.growth_series` + CLI `trend`.
+- **Confusion matrix + macro-F1** in the verification bench.
+
 ## [0.1.0] — 2026-07-01
 
 Initial public release (early prototype).

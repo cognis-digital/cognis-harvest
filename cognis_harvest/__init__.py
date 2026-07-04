@@ -12,6 +12,6 @@ crop-spectra overlap. See docs/LIMITATIONS.md.
 (c) 2026 Cognis Digital LLC (Wyoming, USA). Source-available under COCL-1.0.
 """
 
-__version__ = "0.1.0"
-__all__ = ["spectral", "classify", "detect", "area", "yield_model",
+__version__ = "0.2.0"
+__all__ = ["spectral", "classify", "detect", "area", "yield_model", "trends",
            "change", "geojson", "report", "synth"]

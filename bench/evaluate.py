@@ -11,7 +11,7 @@ from cognis_harvest.classify import NearestCentroid
 from cognis_harvest.detect import CROP_CLASSES, classify_scene
 from cognis_harvest.geojson import to_geojson, to_json
 
-from .metrics import area_mape, classification_metrics, prf
+from .metrics import area_mape, classification_metrics, confusion_matrix, macro_f1, prf
 
 CLASSES = list(synth.CENTROIDS.keys())
 
@@ -31,6 +31,8 @@ def evaluate() -> dict:
     scene, truth = synth.generate_scene(profile="clean", width=32, height=32)
     pred = _labels(scene, clf)
     clean = classification_metrics(pred, truth, CLASSES)
+    clean["macro_f1"] = macro_f1(pred, truth, CLASSES)
+    clean["confusion"] = confusion_matrix(pred, truth, CLASSES)
     mape = area_mape(Counter(pred.values()), Counter(truth.values()),
                      CROP_CLASSES, scene["pixel_area_ha"])
 

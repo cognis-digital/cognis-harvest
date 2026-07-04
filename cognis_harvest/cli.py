@@ -85,6 +85,29 @@ def cmd_geojson(args):
     return 0
 
 
+def cmd_trend(args):
+    """Cultivation-trend demo: area over time, growth rate, expansion alerts."""
+    from collections import Counter
+    from . import synth
+    from .classify import NearestCentroid
+    from .detect import classify_scene
+    from .trends import area_series, expansion_alerts, growth
+    clf = NearestCentroid(synth.BANDS).fit(synth.generate_training())
+    scenes = synth.growth_series(steps=args.steps)
+    counts = [Counter(classify_scene(s, clf)["counts"]) for s in scenes]
+    series = area_series(counts, scenes[0]["pixel_area_ha"])
+    g = growth(series)
+    print(f"COGNIS HARVEST | cultivation trend over {len(scenes)} time steps")
+    for crop, ys in series.items():
+        if any(ys):
+            print(f"  {crop:9} area (ha): {ys}  rate {g[crop]['rate_ha_per_step']}/step  "
+                  f"({g[crop]['change_pct']:+.0f}%)")
+    for a in expansion_alerts(series):
+        print(f"  ALERT expanding cultivation: {a['crop']} +{a['change_pct']:.0f}% "
+              f"({a['change_ha']} ha)")
+    return 0
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="cognis-harvest",
                                 description="Cognis Harvest — illicit-crop detection & yield estimation")
@@ -118,6 +141,10 @@ def build_parser():
     g.add_argument("--scene", required=True)
     g.add_argument("--training", required=True)
     g.set_defaults(func=cmd_geojson)
+
+    t = sub.add_parser("trend", help="cultivation-area trend + expansion alerts (time series)")
+    t.add_argument("--steps", type=int, default=4)
+    t.set_defaults(func=cmd_trend)
     return p
 
 

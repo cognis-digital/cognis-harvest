@@ -32,6 +32,44 @@
           "recall": 0.9722,
           "f1": 0.9722
         }
+      },
+      "macro_f1": 0.9889,
+      "confusion": {
+        "forest": {
+          "forest": 732,
+          "soil": 0,
+          "coca": 0,
+          "poppy": 0,
+          "cannabis": 0
+        },
+        "soil": {
+          "forest": 0,
+          "soil": 184,
+          "coca": 0,
+          "poppy": 0,
+          "cannabis": 0
+        },
+        "coca": {
+          "forest": 0,
+          "soil": 0,
+          "coca": 35,
+          "poppy": 0,
+          "cannabis": 1
+        },
+        "poppy": {
+          "forest": 0,
+          "soil": 0,
+          "coca": 0,
+          "poppy": 36,
+          "cannabis": 0
+        },
+        "cannabis": {
+          "forest": 0,
+          "soil": 0,
+          "coca": 1,
+          "poppy": 0,
+          "cannabis": 35
+        }
       }
     },
     "area_mape_clean": 0.0,
@@ -52,20 +90,20 @@
     {
       "scene": "48x48",
       "pixels": 2304,
-      "classify_s": 0.0268,
-      "pixels_per_s": 86120
+      "classify_s": 0.0315,
+      "pixels_per_s": 73220
     },
     {
       "scene": "96x96",
       "pixels": 9216,
-      "classify_s": 0.1053,
-      "pixels_per_s": 87510
+      "classify_s": 0.1193,
+      "pixels_per_s": 77278
     },
     {
       "scene": "160x160",
       "pixels": 25600,
-      "classify_s": 0.2992,
-      "pixels_per_s": 85569
+      "classify_s": 0.3553,
+      "pixels_per_s": 72044
     }
   ],
   "environment": {

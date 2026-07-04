@@ -30,6 +30,21 @@ def classification_metrics(pred: dict, truth: dict, classes) -> dict:
     return {"overall_accuracy": round(correct / total, 4) if total else 0.0, "per_class": per}
 
 
+def confusion_matrix(pred: dict, truth: dict, classes) -> dict:
+    m = {a: {b: 0 for b in classes} for a in classes}
+    for k, t in truth.items():
+        p = pred.get(k, t)
+        if t in m and p in m[t]:
+            m[t][p] += 1
+    return m
+
+
+def macro_f1(pred: dict, truth: dict, classes) -> float:
+    per = classification_metrics(pred, truth, classes)["per_class"]
+    f1s = [per[c]["f1"] for c in classes]
+    return round(sum(f1s) / len(f1s), 4) if f1s else 0.0
+
+
 def area_mape(pred_counts: dict, true_counts: dict, crop_classes, pixel_area_ha: float) -> float:
     errs = []
     for c in crop_classes:

@@ -69,3 +69,14 @@ def generate_scene(seed: int = 11, profile: str = "clean", width: int = 32, heig
     }
     flat_truth = {(r, c): truth[r][c] for r in range(height) for c in range(width)}
     return scene, flat_truth
+
+
+def growth_series(seed=50, steps=4, width=32, height=32):
+    """A time series of scenes with a coca patch expanding each step — for
+    cultivation-trend analysis. Returns a list of scenes."""
+    scenes = []
+    for i in range(steps):
+        patches = [("coca", 4, 4, 7 + i * 2, 7 + i * 2)]  # grows each step
+        scene, _ = generate_scene(seed=seed, width=width, height=height, patches=patches)
+        scenes.append(scene)
+    return scenes

@@ -24,8 +24,8 @@ Environment: CPython 3.14.0 on Windows/AMD64. Deterministic synthetic data.
 
 | Scene | Pixels | Classify (s) | Pixels/s |
 |---:|---:|---:|---:|
-| 48x48 | 2,304 | 0.0268 | 86,120 |
-| 96x96 | 9,216 | 0.1053 | 87,510 |
-| 160x160 | 25,600 | 0.2992 | 85,569 |
+| 48x48 | 2,304 | 0.0315 | 73,220 |
+| 96x96 | 9,216 | 0.1193 | 77,278 |
+| 160x160 | 25,600 | 0.3553 | 72,044 |
 
 Gated in CI by `tests/test_bench.py`. See `docs/LIMITATIONS.md`.
